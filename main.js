@@ -1,9 +1,18 @@
-let clock = currentTime();
+
+
 
 function currentTime() {
-    let h = getHours();
-    let m = getMinutes();
-    let s = getSeconds();
-    
-    console.log(h, m, s);
+  let d = new Date ();
+  let h = d.getHours();
+  let m = d.getMinutes();
+  let s = d.getSeconds();
+  return `${h} : ${m} : ${s}`;
 }
+
+function updateTime() {
+const y = currentTime();
+const x = document.getElementById('clock');
+x.textContent = y;
+}
+
+setInterval(updateTime, 1000);
