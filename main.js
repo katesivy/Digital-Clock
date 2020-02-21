@@ -10,6 +10,7 @@ function currentTime() {
   var ss = twoDigits(s);
   var ampm = 'AM';
   if (h >= 12) {
+    hh = h - 12;
     ampm = 'PM';
   }
   return `${hh} : ${mm} : ${ss} ${ampm}`;
